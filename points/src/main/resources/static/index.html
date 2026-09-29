@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loyalty Points Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💎 LoyaltyPoints</h1>
+        <p>Tier-Based Retail Loyalty Points Engine</p>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main>
+
+        <!-- Customer Card -->
+        <section class="customer-card">
+
+            <div>
+                <h2 id="customerName">Loading...</h2>
+                <p id="customerEmail">Loading...</p>
+            </div>
+
+            <div class="tier-badge" id="customerTier">
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Available Points</h3>
+                <p id="availablePoints">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Lifetime Points</h3>
+                <p id="lifetimePoints">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Current Discount</h3>
+                <p id="discountPercentage">0%</p>
+            </div>
+
+        </section>
+
+<!-- Tier Progress -->
+<section class="section-card tier-section">
+
+    <h2>🏆 Loyalty Tier Progress</h2>
+
+    <div class="tier-levels">
+
+        <div class="tier-item">
+            <div class="tier-icon">🥈</div>
+            <h3>Silver</h3>
+            <p>0+ points</p>
+            <span>0% discount</span>
+        </div>
+
+        <div class="tier-item">
+            <div class="tier-icon">🥇</div>
+            <h3>Gold</h3>
+            <p>1,000+ points</p>
+            <span>5% discount</span>
+        </div>
+
+        <div class="tier-item active">
+            <div class="tier-icon">💎</div>
+            <h3>Platinum</h3>
+            <p>5,000+ points</p>
+            <span>10% discount</span>
+        </div>
+
+    </div>
+
+    <div class="progress-container">
+
+        <div class="progress-info">
+            <span>Lifetime Points</span>
+            <strong id="progressText">0 / 5000</strong>
+        </div>
+
+        <div class="progress-bar">
+            <div
+                class="progress-fill"
+                id="progressFill">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+        <!-- Purchase History -->
+        <section class="section-card">
+
+            <h2>🛍️ Purchase History</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Purchase ID</th>
+                        <th>Amount</th>
+                        <th>Points Earned</th>
+                        <th>Discount</th>
+                    </tr>
+                </thead>
+
+                <tbody id="purchaseTable">
+                    <tr>
+                        <td colspan="4">Loading...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- Points Ledger -->
+        <section class="section-card">
+
+            <h2>📜 Points History</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Points</th>
+                        <th>Transaction Type</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ledgerTable">
+                    <tr>
+                        <td colspan="3">Loading...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- Redeem Points -->
+        <section class="section-card redeem-section">
+
+            <h2>🎁 Redeem Points</h2>
+
+            <div class="redeem-form">
+
+                <input
+                    type="number"
+                    id="redeemPoints"
+                    placeholder="Enter points to redeem"
+                    min="1">
+
+                <button onclick="redeemPoints()">
+                    Redeem Points
+                </button>
+
+            </div>
+
+            <p id="redeemMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 LoyaltyPoints | Retail Loyalty Management System</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

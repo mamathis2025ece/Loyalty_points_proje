@@ -1,0 +1,463 @@
+/* ==========================================
+   GLOBAL
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    background: linear-gradient(135deg, #182848, #304f8f);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+   ========================================== */
+
+main {
+    width: 92%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+
+/* ==========================================
+   CUSTOMER PROFILE CARD
+   ========================================== */
+
+.customer-card {
+    background: white;
+    padding: 28px 30px;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 25px;
+}
+
+.customer-card h2 {
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+
+.customer-card p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.tier-badge {
+    background: #f1e7ff;
+    color: #7c3aed;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: 1px solid #dfc8ff;
+}
+
+
+/* ==========================================
+   STATISTICS CARDS
+   ========================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.10);
+}
+
+.stat-card h3 {
+    color: #6b7280;
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    color: #182848;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   GENERAL SECTION CARD
+   ========================================== */
+
+.section-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.section-card h2 {
+    font-size: 21px;
+
+    margin-bottom: 22px;
+
+    color: #182848;
+}
+
+
+/* ==========================================
+   TABLE
+   ========================================== */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f3f5f9;
+}
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    color: #4b5563;
+
+    font-weight: 600;
+}
+
+td {
+    padding: 15px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    font-size: 14px;
+
+    color: #374151;
+}
+
+tbody tr:hover {
+    background: #fafbfc;
+}
+
+
+/* ==========================================
+   REDEEM SECTION
+   ========================================== */
+
+.redeem-section {
+    border-left: 5px solid #7c3aed;
+}
+
+.redeem-form {
+    display: flex;
+
+    gap: 12px;
+
+    max-width: 650px;
+}
+
+.redeem-form input {
+    flex: 1;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.redeem-form input:focus {
+    border-color: #7c3aed;
+
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.redeem-form button {
+    padding: 13px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #182848;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.redeem-form button:hover {
+    background: #304f8f;
+
+    transform: translateY(-1px);
+}
+
+#redeemMessage {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 750px) {
+
+    main {
+        width: 94%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .redeem-form {
+        flex-direction: column;
+    }
+
+    .redeem-form button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+/* ==========================================
+   TIER PROGRESS
+   ========================================== */
+
+.tier-section {
+    overflow: hidden;
+}
+
+.tier-levels {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.tier-item {
+    text-align: center;
+
+    padding: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: #fafbfc;
+
+    transition: transform 0.2s ease;
+}
+
+.tier-item:hover {
+    transform: translateY(-3px);
+}
+
+.tier-item.active {
+    border: 2px solid #7c3aed;
+
+    background: #f7f1ff;
+}
+
+.tier-icon {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.tier-item h3 {
+    margin-bottom: 6px;
+
+    color: #182848;
+}
+
+.tier-item p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.tier-item span {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #7c3aed;
+}
+
+
+/* Progress */
+
+.progress-container {
+    margin-top: 10px;
+}
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+.progress-info strong {
+    color: #182848;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 12px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #a855f7
+    );
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+@media (max-width: 750px) {
+
+    .tier-levels {
+        grid-template-columns: 1fr;
+    }
+
+}
